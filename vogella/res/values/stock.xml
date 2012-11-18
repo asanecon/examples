@@ -1,0 +1,15 @@
+<resources>
+    <string-array name="stockName">
+        <item>IBM</item>
+        <item>INTL</item>
+        <item>MSFT</item>
+        <item>APPL</item>
+    </string-array>
+
+    <string-array name="stockValues">
+        <item>http://www.ibm.com</item>
+        <item>http://www.intel.com</item>
+        <item>www.microsoft.com</item>
+        <item>www.apple.com</item>
+    </string-array>
+</resources>
