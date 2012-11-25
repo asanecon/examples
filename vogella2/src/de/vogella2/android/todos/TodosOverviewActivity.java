@@ -124,6 +124,9 @@ public class TodosOverviewActivity extends ListActivity implements
   // Opens the second activity if an entry is clicked
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
+
+      // the id will automatically be the id of the cursor row which is automatically the _id from
+      // the database.
     super.onListItemClick(l, v, position, id);
     Intent i = new Intent(this, TodoDetailActivity.class);
     Uri todoUri = Uri.parse(MyTodoContentProvider.CONTENT_URI + "/" + id);
@@ -184,6 +187,11 @@ public class TodosOverviewActivity extends ListActivity implements
     // Tells the loader how it needs to be instantiated.
     // Passed a cursor loader that loads stuff from the database.
   public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+
+      // Cursor query must have an integer column "_id" for the CursorAdapter to work.
+      // The cursors id will be that _id.
+
+
     String[] projection = { TodoTable.COLUMN_ID, TodoTable.COLUMN_SUMMARY };
 
       //Loader that queries the ContentResolver and returns a cursor. The cursor

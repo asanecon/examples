@@ -60,6 +60,9 @@ public class TodoDetailActivity extends Activity {
             // result_ok is negative. returning a negative value is the same as called startActivity
             // on the calling activity
           setResult(RESULT_OK);
+
+            // will call onPause or onsaveinstancestate which will end up saving information
+            // in database
           finish();
         }
       }
