@@ -1,2 +1,4 @@
 vogella2/.idea/
-.class
+*.class
+out/
+
